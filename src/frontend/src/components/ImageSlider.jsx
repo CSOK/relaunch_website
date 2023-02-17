@@ -51,7 +51,7 @@ const ImageSlider = ({ slides }) => {
     color: "white",
     backgroundImage: `url(${slides[currentIndex].url})`,
     backgroundSize: "cover",
-    transition: "background-image 0.5s linear",
+    transition: "background-image 0.7s linear",
   };
 
   const goToPrevious = () => {
@@ -74,7 +74,7 @@ const ImageSlider = ({ slides }) => {
     } else if (currentIndex === slides.length - 1) {
       setCurrentIndex(0);
     }
-  }, 5000);
+  }, 30000);
 
   return (
     <div style={sliderStyles}>
