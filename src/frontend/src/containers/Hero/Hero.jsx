@@ -1,9 +1,24 @@
 import React from "react";
 import "./Hero.scss";
+import { ImageSlider } from "../../components";
+const sliderImages = [
+  { url: "src/assets/enviroment_1.jpg", title: "beach" },
+  { url: "src/assets/enviroment_2.jpg", title: "boat" },
+  { url: "src/assets/enviroment_3.jpg", title: "forest" },
+  { url: "src/assets/enviroment_4.jpg", title: "city" },
+  { url: "src/assets/enviroment_5.jpg", title: "italy" },
+];
+const containerStyles = {
+  width: "100%",
+  height: "85vh",
+  margin: "0 auto",
+};
 const Hero = () => {
   return (
     <div className="hero">
-      <h1>Hero Section</h1>
+      <div style={containerStyles}>
+        <ImageSlider slides={sliderImages} />
+      </div>
     </div>
   );
 };
