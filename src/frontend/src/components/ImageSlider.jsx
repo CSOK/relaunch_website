@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ImageSlider.scss";
 const navigation = {
   top: "50%",
   transform: "translate(0, -50%)",
@@ -82,10 +83,15 @@ const ImageSlider = ({ slides }) => {
         <div onClick={goToPrevious}>❰</div>
         <div onClick={goToNext}>❱</div>
       </div>
-      <div id="image" style={slideStylesWidthBackground}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum,
-          corporis!
+      <div className="image" style={slideStylesWidthBackground}>
+        {/* <div style={{backgroundImage:{`url(${slides[currentIndex].url})`}}} className="image"> */}
+        <p className="paragraph">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
+          odit ducimus natus consequatur laudantium rem temporibus id nisi
+          voluptate eligendi nihil adipisci, dolore error. Temporibus, voluptate
+          porro veritatis fugit quam rem, aliquid quod ratione laborum, earum
+          incidunt accusamus ea? Ex ullam quos nobis iusto quia similique
+          maxime. Dolores, molestias inventore.
         </p>
       </div>
       <div className="dots" style={dots}>
