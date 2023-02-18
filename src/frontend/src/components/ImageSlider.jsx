@@ -85,14 +85,14 @@ const ImageSlider = ({ slides }) => {
       </div>
       <div className="image" style={slideStylesWidthBackground}>
         {/* <div style={{backgroundImage:{`url(${slides[currentIndex].url})`}}} className="image"> */}
-        <p className="paragraph">
+        {/* <p className="paragraph">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
           odit ducimus natus consequatur laudantium rem temporibus id nisi
           voluptate eligendi nihil adipisci, dolore error. Temporibus, voluptate
           porro veritatis fugit quam rem, aliquid quod ratione laborum, earum
           incidunt accusamus ea? Ex ullam quos nobis iusto quia similique
           maxime. Dolores, molestias inventore.
-        </p>
+        </p> */}
       </div>
       <div className="dots" style={dots}>
         {slides.map((slide, slideIndex) => (

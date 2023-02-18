@@ -11,31 +11,24 @@ const AboutUs = () => {
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             condimentum, nisl ut ultricies lacinia, nisl nisl aliquam nisl, nec
             lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut ultricies
-            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet nisl.
-          
+            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet
+            nisl.
           </p>
           <p>
-            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet nisl.
-            Sed condimentum, nisl ut ultricies lacinia, nisl nisl aliquam nisl,
-            nec lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut
+            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet
+            nisl. Sed condimentum, nisl ut ultricies lacinia, nisl nisl aliquam
+            nisl, nec lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut
             ultricies lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit
-
           </p>
 
           <div className="aboutButtons">
-          <button className="readMore">
-            Read More
-          </button>
-          <button className="joinNow">
-            Join Now
-          </button>
+            <button className="readMore">Read More</button>
+            <button className="joinNow">Join Now</button>
           </div>
         </div>
         <div className="aboutImage">
           <img src={COSK} alt="COSK" />
-
         </div>
-
       </div>
     </div>
   );

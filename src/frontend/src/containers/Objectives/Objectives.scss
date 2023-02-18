@@ -1,23 +1,22 @@
-.objectives{
-  width: 100vw;
-  background: rgb(6,17,55);
-  color: #FFFFFF;
-  height: auto;
+.objectives {
+  width: 100%;
+  color: #ffffff;
   padding: 30px 0;
   .objectivesContainer {
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
     gap: 30px;
     margin: 0 30px;
     margin-top: 20px;
-    .objective{
+    .objective {
       height: 35vh;
-      width: 35vh;
-      border: 5px solid #FFFFFF;
+      width: 23vw;
+      border: 5px solid #ffffff;
       border-radius: 10px;
+      font-size: 25px;
     }
-
   }
 }
 
@@ -25,13 +24,13 @@
 @media (max-width: 768px) {
   .objectives {
     .objectivesContainer {
+      border: 1px solid red;
       flex-direction: column;
+      justify-content: center;
       gap: 0;
-      .objective{
-        height: 16vh;
-     
+      .objective {
+        width: 75vw;
         margin-bottom: 20px;
-        border: none;
       }
     }
   }

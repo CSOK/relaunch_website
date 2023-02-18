@@ -2,11 +2,8 @@ import React from "react";
 import "./Hero.scss";
 import { ImageSlider } from "../../components";
 const sliderImages = [
-  { url: "src/assets/enviroment_1.jpg", title: "beach" },
-  { url: "src/assets/enviroment_2.jpg", title: "boat" },
-  { url: "src/assets/enviroment_3.jpg", title: "forest" },
-  { url: "src/assets/enviroment_4.jpg", title: "city" },
-  { url: "src/assets/enviroment_5.jpg", title: "italy" },
+  { url: "src/assets/enviroment_5.jpg", title: "beach" },
+  { url: "src/assets/enviroment_3.jpg", title: "boat" },
 ];
 const containerStyles = {
   width: "100%",
