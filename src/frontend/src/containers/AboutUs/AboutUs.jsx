@@ -1,9 +1,42 @@
 import React from "react";
 import "./AboutUs.scss";
+import COSK from "../../assets/COSK.png";
 const AboutUs = () => {
   return (
     <div className="aboutUs">
-      <h1>About Us Section</h1>
+      <h2>About Us</h2>
+      <div className="aboutContainer">
+        <div className="aboutContent">
+          <p>
+            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            condimentum, nisl ut ultricies lacinia, nisl nisl aliquam nisl, nec
+            lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut ultricies
+            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet nisl.
+          
+          </p>
+          <p>
+            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet nisl.
+            Sed condimentum, nisl ut ultricies lacinia, nisl nisl aliquam nisl,
+            nec lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut
+            ultricies lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit
+
+          </p>
+
+          <div className="aboutButtons">
+          <button className="readMore">
+            Read More
+          </button>
+          <button className="joinNow">
+            Join Now
+          </button>
+          </div>
+        </div>
+        <div className="aboutImage">
+          <img src={COSK} alt="COSK" />
+
+        </div>
+
+      </div>
     </div>
   );
 };

@@ -1,6 +1,79 @@
 .aboutUs {
-  h1 {
-    text-transform: uppercase;
-    color: black;
+  width: 100vw;
+  background: rgb(6,17,55);
+  background: linear-gradient(90deg, rgba(6,17,55,1) 0%, rgba(0,0,0,1) 67%);
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFFFFF;
+  height: auto;
+  padding: 30px 0;
+  .aboutContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50vh;
+    margin: 0 30px;
+    .aboutContent {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+      button{
+        width: 120px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        color: #06133C;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0 10px;
+      }
+      .readMore{
+        background-color: #06133C;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+     
+      }
+    }
+
+    .aboutImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: gra;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        min-width: 40%;
+        min-height: 40%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+}
+
+//media queries
+@media (max-width: 768px) {
+  .aboutUs {
+  padding-top: 10px;
+    gap: 30px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 29%, rgba(6,19,60,1) 90%); 
+    
+    .aboutContainer{
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      margin: 0 30px;
+      gap: 30px;
+
+
+
+    
+    }
   }
 }
