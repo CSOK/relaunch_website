@@ -1,25 +1,22 @@
-
-
-
 .container {
   display: flex;
-  background-color: white;
   justify-content: space-between;
   align-items: center;
   width: auto;
 
   & > * {
     width: auto;
-    padding:0 20px;
+    padding: 0 20px;
   }
 }
 
-.sponsors h1{
+.sponsors h1 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
-  padding: 20px 0;}
+  padding: 20px 0;
+}
 
 // make the sponsors container responsive
 @media (max-width: 768px) {
@@ -32,5 +29,3 @@
     }
   }
 }
-
-
