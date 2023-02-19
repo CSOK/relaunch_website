@@ -33,9 +33,9 @@ export const Register = () => {
  
    return (
      <>
-       <button onClick={() => setIsModalOpen(true)} className="btn-modal">
+       <div onClick={() => setIsModalOpen(true)} className="btn-modal">
          Join now
-       </button>
+       </div>
        <Modal
         isOpen={isModalOpen}
         onRequestClose={() => setIsModalOpen(false)}
