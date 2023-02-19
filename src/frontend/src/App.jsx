@@ -9,11 +9,13 @@ import {
   Objectives,
   Sponsors,
   StoriesSection,
+  Register,
 } from "./containers";
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Register />
       <Hero />
       <AboutUs />
       <Objectives />
