@@ -75,7 +75,7 @@ const ImageSlider = ({ slides }) => {
     } else if (currentIndex === slides.length - 1) {
       setCurrentIndex(0);
     }
-  }, 30000);
+  }, 15000);
 
   return (
     <div style={sliderStyles}>
