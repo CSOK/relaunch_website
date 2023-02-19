@@ -1,0 +1,133 @@
+$input-border:#D8D1D1;
+$bg-color:#23224A;
+.form-page{
+    text-align: center;
+    color: white;
+    background-color: $bg-color;
+    background-size: 100%;
+    border-radius: 4px;
+    padding: 50px ;
+
+    h1{
+      font-weight: 100;
+     .t1{
+        color: rgb(206, 177, 14);
+     }
+     .t2{
+        color: green;
+     }
+     .t3{
+        color: gray;
+     }
+     .t4{
+        color: red;
+     }
+    } 
+    .form{
+        text-align: start;
+        margin: auto;
+        max-width: 600px;
+        .form-input{
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            
+            label{
+                font-weight: 500;
+                font-size: large;
+            }
+            .input-field{
+                border: solid 1px $input-border;
+                padding: 5px 20px;
+                color: grey;
+                border-radius: 4px;
+                font-size: large;
+            }
+            .input-field:focus{
+                border: solid 1px blue;
+            }
+        }
+        .register-button{
+            background-color: green;
+            color: white;
+            font-size:x-large;
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+            border: none;
+            border-radius: 6px;
+            height: 50px;
+        }
+    }
+}
+// small screen
+@media (max-width: 768px) {
+    .form-page{
+        text-align: center;
+        color: white;
+        background-color: $bg-color;
+        background-size: 100%;
+        border-radius: 4px;
+        padding: 20px ;
+    
+        .h1{
+            font-size: large;
+        }
+        .form{
+            text-align: start;
+            margin: auto;
+            max-width: 600px;
+            .form-input{
+                
+                
+                label{
+                    font-weight: 400;
+                    font-size: medium;
+                }
+                .input-field{
+                   
+                    font-size: medium;
+                }
+                .input-field:focus{
+                    border: solid 1px blue;
+                }
+            }
+         
+        }
+    }
+}
+
+// modal styling
+body.active-modal {
+    overflow-y : hidden; //to constrain vertical scrolling
+}
+
+// .btn-modal {
+//     padding: 10px 20px;
+//     display: block;
+//     margin: 100px auto 0;
+//     font-size: 18px;
+// }
+
+.modal-content {
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    border-radius: 5px;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
