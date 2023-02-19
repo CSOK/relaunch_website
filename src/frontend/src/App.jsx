@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <Register />
       <Hero />
-      <AboutUs />
+      <About  Us />
       <Objectives />
       <StoriesSection />
       <Gallery />

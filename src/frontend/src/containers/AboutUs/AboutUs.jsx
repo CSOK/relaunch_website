@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutUs.scss";
 import COSK from "../../assets/COSK.png";
+import { Register } from "../Form/Register";
 const AboutUs = () => {
   return (
     <div className="aboutUs">
@@ -23,7 +24,7 @@ const AboutUs = () => {
 
           <div className="aboutButtons">
             <button className="readMore">Read More</button>
-            <button className="joinNow">Join Now</button>
+            <button className="joinNow"><Register /></button>
           </div>
         </div>
         <div className="aboutImage">

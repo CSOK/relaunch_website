@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.scss";
-
+import { Register } from "../Form/Register";
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
 
@@ -37,7 +37,7 @@ const Navbar = () => {
             <a href="/">GALLERIES</a>
           </li>
           <li>
-            <button className="btn btn-primary">Join Now</button>
+            <button className="btn btn-primary"><Register/></button>
           </li>
         </ul>
       </div>
