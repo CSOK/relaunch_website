@@ -1,2 +1,3 @@
 import ImageSlider from "./ImageSlider";
-export { ImageSlider };
+import StoriesCard from "./StoriesCard";
+export { ImageSlider, StoriesCard };

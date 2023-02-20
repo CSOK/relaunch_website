@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ImageSlider.scss";
+import "./Styles/ImageSlider.scss";
 const navigation = {
   top: "50%",
   transform: "translate(0, -50%)",

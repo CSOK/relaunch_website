@@ -13,10 +13,25 @@ import {
 } from "./containers";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
-    <div className="App">
-      <Navbar />
-      <Register />
+    <div className="app">
+      <Navbar
+        isModalOpen={isModalOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
+      <Register
+        isModalOpen={isModalOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
       <Hero />
       <AboutUs />
       <Objectives />

@@ -8,12 +8,12 @@ import microsoft from "../../assets/sponsors/microsoft.png";
 const Sponsors = () => {
   return (
     <div className="sponsors">
-      <h1>Sponsors & Organizers.</h1>
+      {/* <h1>Sponsors</h1> */}
       <div className="container">
-          <img src={dehub} alt="" />
-          <img src={dkut} alt="" />
-          <img src={gdsc} alt="" />
-          <img src={microsoft} alt="" />
+        <img src={dehub} alt="" />
+        <img src={dkut} alt="" />
+        <img src={gdsc} alt="" />
+        <img src={microsoft} alt="" />
       </div>
     </div>
   );

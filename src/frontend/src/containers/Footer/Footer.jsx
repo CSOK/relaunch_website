@@ -18,12 +18,12 @@ const Footer = () => {
           <li>STORIES</li>
           <li>GALLERY</li>
         </ul>
-        <ul class="child">
+        {/* <ul class="child">
           <li class="head">POLICY INFO </li>
           <li>PRIVACY INFO</li>
           <li>FAQ</li>
           <li>TERMS OF POLICY</li>
-        </ul>
+        </ul> */}
         <div class="child">
           <div class="head center">
             <p>SOCIALS</p>
@@ -41,7 +41,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div class="line"></div>
       <div>
         @2023 <span>|</span> COMPUTER SOCIETY OF KIMATHI
       </div>

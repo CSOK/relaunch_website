@@ -1,12 +1,46 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./Navbar.scss";
+import CSOKLogo from "../../assets/CSOK_2.png";
 
-const Navbar = () => {
+const Navbar = ({ isModalOpen, openModal, closeModal }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-
   return (
     <nav className="navigation">
+      <div>
+        <img className="logo" src={CSOKLogo} alt="" />
+      </div>
+      <div className={`navigation-menu ${isNavExpanded ? "expanded" : " "}`}>
+        <ul>
+          <li>
+            <a href="/">HOME</a>
+          </li>
+          <li>
+            <a href="#aboutUs">ABOUT US</a>
+          </li>
+          <li>
+            <a href="#objectives">OBJECTIVES</a>
+          </li>
+          <li>
+            <a href="#stories">STORIES</a>
+          </li>
+          <li>
+            <a href="#gallery">GALLERY</a>
+          </li>
+
+          <div>
+            <button
+              className="btn"
+              onClick={() => {
+                openModal();
+              }}
+            >
+              Join Now
+            </button>
+          </div>
+        </ul>
+      </div>
+
       <button
         className="hamburger"
         onClick={() => {
@@ -15,32 +49,6 @@ const Navbar = () => {
       >
         <GiHamburgerMenu />
       </button>
-      <div
-        className={
-          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
-        }
-      >
-        <ul>
-          <li>
-            <a href="/">HOME</a>
-          </li>
-          <li>
-            <a href="/">ABOUT US</a>
-          </li>
-          <li>
-            <a href="/">OBJECTIVES</a>
-          </li>
-          <li>
-            <a href="/">STORIES</a>
-          </li>
-          <li>
-            <a href="/">GALLERIES</a>
-          </li>
-          <li>
-            <button className="btn btn-primary">Join Now</button>
-          </li>
-        </ul>
-      </div>
     </nav>
   );
 };

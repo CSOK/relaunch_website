@@ -3,26 +3,24 @@ import "./AboutUs.scss";
 import COSK from "../../assets/COSK.png";
 const AboutUs = () => {
   return (
-    <div className="aboutUs">
-      <h2>About Us</h2>
+    <div className="aboutUs" id="aboutUs">
+      <h1>About Us</h1>
       <div className="aboutContainer">
         <div className="aboutContent">
           <p>
-            lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            condimentum, nisl ut ultricies lacinia, nisl nisl aliquam nisl, nec
-            lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut ultricies
-            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet
-            nisl.
+            We are an academic-technology club founded in 2012 that has a
+            mission of cultivating a tech structure through meetups, talks,
+            training, hackathons and social activities for its members.
           </p>
           <p>
-            lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit amet
-            nisl. Sed condimentum, nisl ut ultricies lacinia, nisl nisl aliquam
-            nisl, nec lacinia nisl nisl sit amet nisl. Sed condimentum, nisl ut
-            ultricies lacinia, nisl nisl aliquam nisl, nec lacinia nisl nisl sit
+            The club membership is open for students and staff within the
+            university.We aim to create awareness, promote growth of computer
+            knowledge and entrepreneurship and nurture technological and
+            programming talent.
           </p>
 
           <div className="aboutButtons">
-            <button className="readMore">Read More</button>
+            {/* <button className="readMore">Read More</button> */}
             <button className="joinNow">Join Now</button>
           </div>
         </div>

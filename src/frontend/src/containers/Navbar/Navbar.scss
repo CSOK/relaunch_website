@@ -1,104 +1,116 @@
 .navigation {
-  height: 60px;
-  width: 100vw;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #000000;
-  font-family: Gothic A1;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
   font-style: normal;
-  color: black;
-}
+  padding: 0 12px;
 
-.navigation-menu {
-  display: flex;
-}
-.navigation-menu ul {
-  display: flex;
-  padding: 0;
-}
-.navigation-menu li {
-  list-style-type: none;
-  margin: 0 1rem;
-}
-.navigation-menu li a {
-  text-decoration: none;
-  color: white;
-  display: block;
-  width: 100%;
-}
-.hamburger {
-  border: 0;
-  height: 40px;
-  width: 40px;
-  padding: 0.5rem;
-  border-radius: 50%;
-  background-color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  transform: translateY(-50%);
-  display: none;
-}
-.hamburger:hover {
-  background-color: #ffffff;
-}
-.btn {
-  background-color: #fff;
-  color: #000;
-  border: none;
-  border-radius: 19px;
-  margin-right: 20px;
-  padding: 5px 10px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #f2f2f2;
+  .logo {
+    width: 140px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .navigation-menu ul {
-    // navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)
-    position: absolute;
-    top: 60px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 77px);
-    background-color: rgb(0, 0, 0);
-    border-top: 1px solid black;
+  .navigation-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    display: none;
+    ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        margin: 0 1rem;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          color: white;
+          display: block;
+          width: 100%;
+
+          &:hover {
+            color: black;
+          }
+
+          @media screen and (max-width: 768px) {
+            color: rgb(255, 255, 255);
+            width: 100%;
+            padding: 1.5rem 0;
+          }
+        }
+        &:hover {
+          background-color: white;
+        }
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          margin: 0;
+          color: black;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgb(0, 0, 0);
+        border-top: 1px solid black;
+        display: none;
+        height: 450px;
+        width: 65vw;
+      }
+    }
   }
+
   .hamburger {
-    display: block;
-  }
-  .navigation-menu li {
-    // centers link text and strips off margin
-    text-align: center;
-    margin: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+    &:hover {
+      background-color: #ffffff;
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
   }
 
-  .navigation-menu li a {
-    color: rgb(255, 255, 255);
-    width: 100%;
-    padding: 1.5rem 0;
-  }
-  .navigation-menu li:hover {
-    background-color: #eee;
+  .btn {
+    border-radius: 19px;
+    background: none;
   }
 
-  .navigation-menu.expanded ul {
-    display: block;
+  .expanded {
+    ul {
+      display: flex;
+    }
   }
 }
