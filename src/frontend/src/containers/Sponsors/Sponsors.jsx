@@ -4,7 +4,7 @@ import dehub from "../../assets/sponsors/dehub.png";
 import dkut from "../../assets/sponsors/dkut.png";
 import gdsc from "../../assets/sponsors/gdsc.png";
 import microsoft from "../../assets/sponsors/microsoft.png";
-
+import { MotionWrap } from "../../HOC";
 const Sponsors = () => {
   return (
     <div className="sponsors">
@@ -19,4 +19,4 @@ const Sponsors = () => {
   );
 };
 
-export default Sponsors;
+export default MotionWrap(Sponsors, "sponsors");
