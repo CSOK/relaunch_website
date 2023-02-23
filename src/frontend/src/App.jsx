@@ -14,14 +14,22 @@ import {
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+
+  const toggleGallery = () => {
+    setIsGalleryOpen(!isGalleryOpen);
+    console.log(`State of gallery ${isGalleryOpen}`);
+  };
   const openModal = () => {
     setIsModalOpen(true);
+    console.log("Open modal is in play");
   };
   const closeModal = () => {
     setIsModalOpen(false);
+    console.log("Close modal is in play");
   };
   return (
-    <div className="app">
+    <div className="app" id="app">
       <Navbar
         isModalOpen={isModalOpen}
         openModal={openModal}
@@ -33,10 +41,14 @@ function App() {
         closeModal={closeModal}
       />
       <Hero />
-      <AboutUs />
+      <AboutUs
+        isModalOpen={isModalOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+      />
       <Objectives />
       <StoriesSection />
-      <Gallery />
+      <Gallery toggleGallery={toggleGallery} isGalleryOpen={isGalleryOpen} />
       <Sponsors />
       <Footer />
     </div>

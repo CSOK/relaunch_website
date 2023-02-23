@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.scss";
 import COSK from "../../assets/COSK.png";
-const AboutUs = () => {
+const AboutUs = ({ isModalOpen, openModal, closeModal }) => {
   return (
     <div className="aboutUs" id="aboutUs">
       <h1>About Us</h1>
@@ -21,7 +21,14 @@ const AboutUs = () => {
 
           <div className="aboutButtons">
             {/* <button className="readMore">Read More</button> */}
-            <button className="joinNow">Join Now</button>
+            <button
+              className="joinNow"
+              onClick={() => {
+                openModal();
+              }}
+            >
+              Join Now
+            </button>
           </div>
         </div>
         <div className="aboutImage">

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "./Register.scss";
-import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 export const Register = ({ isModalOpen, openModal, closeModal }) => {
   const [fullName, setName] = useState("");

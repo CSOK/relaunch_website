@@ -1,11 +1,11 @@
 .navigation {
-  min-height: 70px;
+  min-height: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  z-index: 10;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
@@ -14,6 +14,9 @@
   font-style: normal;
   padding: 0 12px;
 
+  .nav-collapsed {
+    display: none;
+  }
   .logo-wrapper {
     margin: 0px 5px;
     img {
@@ -23,7 +26,6 @@
 
   .btn-wrapper {
     display: flex;
-    border: 1px solid white;
     @media screen and (max-width: 768px) {
       button {
         width: 100%;
@@ -36,14 +38,15 @@
   }
 
   .navigation-menu {
-    display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
     li {
       list-style-type: none;
       margin: 0 1rem;
-      width: 100%;
+      width: 80%;
 
       a {
         text-decoration: none;
@@ -74,6 +77,42 @@
         color: black;
       }
     }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .navigation-pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    li {
+      list-style-type: none;
+      margin: 0 1rem;
+      a {
+        text-decoration: none;
+        border: 1px solid white;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 60px;
+
+        &:hover {
+          color: black;
+        }
+      }
+      &:hover {
+        background-color: white;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .hamburger {
@@ -103,13 +142,8 @@
     background: none;
   }
 
-  .expanded {
+  .nav-expanded {
     display: flex;
-    .navigation-menu {
-      flex-direction: column;
-      width: 100%;
-      display: flex;
-    }
 
     .btn-wrapper {
       display: flex;
@@ -117,7 +151,6 @@
 
     .logo-wrapper {
       margin: 0px 2px;
-      border: 1px solid white;
 
       img {
         width: 80px;
@@ -128,19 +161,14 @@
   @media screen and (max-width: 768px) {
     flex-direction: column;
 
-    .navigation-menu {
-      flex-direction: column;
-      width: 100%;
-      display: none;
-    }
-
-    .btn-wrapper {
-      display: none;
-    }
+    // .navigation-menu {
+    //   flex-direction: column;
+    //   width: 100%;
+    //   display: none;
+    // }
 
     .logo-wrapper {
       margin: 0px 2px;
-      border: 1px solid white;
 
       img {
         width: 80px;
