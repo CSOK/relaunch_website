@@ -7,7 +7,7 @@ const sliderImages = [
 ];
 const containerStyles = {
   width: "100%",
-  height: "85vh",
+  height: "70vh",
   margin: "0 auto",
 };
 const Hero = () => {

@@ -49,6 +49,7 @@ export const Register = ({ isModalOpen, closeModal }) => {
             <label htmlFor="email"> Course</label>
             <input
               className="input-field"
+              placeholder="Enter Course"
               type="text"
               value={course}
               onChange={(e) => setCourse(e.target.value)}
@@ -71,7 +72,7 @@ export const Register = ({ isModalOpen, closeModal }) => {
             <input
               type="tel"
               className="input-field"
-              placeholder="07xxxxxxxx"
+              placeholder="eg. 07xxxxxxxx"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required

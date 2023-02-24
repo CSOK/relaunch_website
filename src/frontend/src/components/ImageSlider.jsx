@@ -3,6 +3,13 @@ const slides = [
   { name: "enviroment_5.jpg", title: "beach" },
   { name: "enviroment_3.jpg", title: "boat" },
 ];
+const sliderStyles = {
+  position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  height: "100%",
+};
 
 const navigation = {
   top: "50%",
@@ -32,14 +39,6 @@ const dotStyle = {
   cursor: "pointer",
   fontSize: "25px",
   color: "white",
-};
-
-const sliderStyles = {
-  position: "relative",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  height: "100%",
 };
 
 const ImageSlider = () => {
