@@ -1,16 +1,9 @@
 import { useState } from "react";
-import "./Styles/ImageSlider.scss";
-// import backgroundImage from `${slides[currentIndex]}`;
-// const slides = [
-//   { url: "src/assets/enviroment_5.jpg", title: "beach" },
-//   { url: "src/assets/enviroment_3.jpg", title: "boat" },
-// ];
 const slides = [
-  { url: "src/assets/enviroment_5.jpg", title: "beach" },
-  { url: "src/assets/enviroment_3.jpg", title: "boat" },
+  { name: "enviroment_5.jpg", title: "beach" },
+  { name: "enviroment_3.jpg", title: "boat" },
 ];
 
-// import BackgroundImage from "../assets/";
 const navigation = {
   top: "50%",
   transform: "translate(0, -50%)",
@@ -61,9 +54,6 @@ const ImageSlider = () => {
     justifyContent: "flex-start",
     fontSize: "2rem",
     color: "white",
-    backgroundImage: `url(${slides[currentIndex].url})`,
-    backgroundSize: "cover",
-    transition: "background-image 0.7s linear",
   };
 
   const goToPrevious = () => {
@@ -89,22 +79,17 @@ const ImageSlider = () => {
   }, 15000);
 
   return (
-    <div style={sliderStyles}>
+    <div className="slider-styles" style={sliderStyles}>
       <div style={navigation}>
         <div onClick={goToPrevious}>❰</div>
         <div onClick={goToNext}>❱</div>
       </div>
-      <div className="image" style={slideStylesWidthBackground}>
-        {/* <div style={{backgroundImage:{`url(${slides[currentIndex].url})`}}} className="image"> */}
-        {/* <p className="paragraph">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
-          odit ducimus natus consequatur laudantium rem temporibus id nisi
-          voluptate eligendi nihil adipisci, dolore error. Temporibus, voluptate
-          porro veritatis fugit quam rem, aliquid quod ratione laborum, earum
-          incidunt accusamus ea? Ex ullam quos nobis iusto quia similique
-          maxime. Dolores, molestias inventore.
-        </p> */}
-      </div>
+      <img
+        className="image-container"
+        style={slideStylesWidthBackground}
+        src={`../assets/${slides[currentIndex].name}`}
+        alt="Image Attribute"
+      />
       <div className="dots" style={dots}>
         {slides.map((slide, slideIndex) => (
           <div
