@@ -3,7 +3,7 @@ import { StoriesCard } from "../../components";
 const StoriesSection = () => {
   return (
     <div className="stories" id="stories">
-      <h1>Stories Section</h1>
+      <h1>Stories</h1>
 
       <div className="content_container">
         <StoriesCard />

@@ -5,7 +5,7 @@ const Gallery = ({ toggleGallery, isGalleryOpen }) => {
   console.log(`Gallery section to track state ${isGalleryOpen}`);
   return (
     <div className="gallery" id="gallery">
-      <h1>Gallery Section</h1>
+      <h1>Gallery</h1>
 
       <div
         className={`content_container ${
