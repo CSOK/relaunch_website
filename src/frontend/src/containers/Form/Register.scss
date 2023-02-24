@@ -1,120 +1,82 @@
 $input-border: #d8d1d1;
 $bg-color: rgba(6, 17, 55, 1);
-.form-page {
-  text-align: center;
-  color: white;
-  background-color: $bg-color;
-  background-size: 100%;
-  border-radius: 4px;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  h1 {
-    font-size: 20px;
-  }
-  .form {
+.modal {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: rgba($color: #000000, $alpha: 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .form-page {
+    color: white;
+    background-color: $bg-color;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: start;
-    max-width: 600px;
-    .form-input {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      margin: 5px 0px;
+    justify-content: flex-start;
+    position: relative;
 
-      label {
-        font-weight: 500;
-        font-size: large;
-        margin-bottom: 5px;
-      }
-      .input-field {
-        border: solid 1px $input-border;
-        color: grey;
-        padding: 2px 10px;
-        border-radius: 4px;
-        font-size: large;
-        height: 40px;
-        &:focus {
-          border: solid 1px blue;
-        }
-      }
+    .form-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
-    .button-wrapper {
-      width: 100%;
-      border: 1px solid white;
-      .register-button {
-        width: 100%;
-      }
-    }
-  }
-}
-// small screen
-@media (max-width: 768px) {
-  .form-page {
-    text-align: center;
-    color: white;
-    background-color: $bg-color;
-    background-size: 100%;
-    border-radius: 4px;
-    padding: 20px;
 
-    .h1 {
-      font-size: large;
+    img {
+      width: 85px;
     }
     .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
       text-align: start;
-      margin: auto;
-      max-width: 600px;
       .form-input {
-        .label {
-          font-weight: 400;
-          font-size: medium;
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0px;
+
+        label {
+          font-weight: 500;
+          font-size: large;
+          margin-bottom: 5px;
         }
         .input-field {
-          font-size: medium;
+          border: none;
+          outline: none;
+          color: grey;
+          padding: 2px 10px;
+          border-radius: 4px;
+          font-size: large;
+          height: 40px;
+          &:focus {
+            border: 3px solid purple;
+          }
         }
-        .input-field:focus {
-          border: solid 1px blue;
+      }
+      .button-wrapper {
+        width: 100%;
+        margin-top: 20px;
+        .register-button {
+          width: 100%;
+          border-radius: 40px;
         }
       }
     }
   }
-}
-
-// modal styling
-body.active-modal {
-  overflow-y: hidden; //to constrain vertical scrolling
-}
-
-// .btn-modal {
-//     padding: 10px 20px;
-//     display: block;
-//     margin: 100px auto 0;
-//     font-size: 18px;
-// }
-
-.modal-content {
-  position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #f1f1f1;
-  border-radius: 5px;
-  max-width: 600px;
-  min-width: 300px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 35px;
-  height: 35px;
-  color: white;
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+  }
 }

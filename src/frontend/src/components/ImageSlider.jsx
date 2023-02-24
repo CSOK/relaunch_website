@@ -1,5 +1,16 @@
 import { useState } from "react";
 import "./Styles/ImageSlider.scss";
+// import backgroundImage from `${slides[currentIndex]}`;
+// const slides = [
+//   { url: "src/assets/enviroment_5.jpg", title: "beach" },
+//   { url: "src/assets/enviroment_3.jpg", title: "boat" },
+// ];
+const slides = [
+  { url: "src/assets/enviroment_5.jpg", title: "beach" },
+  { url: "src/assets/enviroment_3.jpg", title: "boat" },
+];
+
+// import BackgroundImage from "../assets/";
 const navigation = {
   top: "50%",
   transform: "translate(0, -50%)",
@@ -38,7 +49,7 @@ const sliderStyles = {
   height: "100%",
 };
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slideStylesWidthBackground = {

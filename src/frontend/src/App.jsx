@@ -35,11 +35,14 @@ function App() {
         openModal={openModal}
         closeModal={closeModal}
       />
-      <Register
-        isModalOpen={isModalOpen}
-        openModal={openModal}
-        closeModal={closeModal}
-      />
+      {isModalOpen && (
+        <Register
+          isModalOpen={isModalOpen}
+          openModal={openModal}
+          closeModal={closeModal}
+        />
+      )}
+
       <Hero />
       <AboutUs
         isModalOpen={isModalOpen}
