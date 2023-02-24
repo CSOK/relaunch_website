@@ -7,106 +7,85 @@ const Navbar = ({ openModal }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
     // <nav className={`navigation ${isNavExpanded ? "expanded" : " "}`}>
-    <nav className="navigation">
+    <nav className="navbar">
       <div className="logo-wrapper">
         <img src={CSOKLogo} alt="" />
       </div>
-      <ul
-        className={`navigation-menu ${
-          isNavExpanded ? "nav-expanded" : "nav-collapsed"
-        } `}
-      >
-        <li>
-          <a
-            href="#app"
-            onClick={() => {
-              setIsNavExpanded(!isNavExpanded);
-            }}
-          >
-            HOME
-          </a>
-        </li>
-        <li>
-          <a
-            href="#aboutUs"
-            onClick={() => {
-              setIsNavExpanded(!isNavExpanded);
-            }}
-          >
-            ABOUT US
-          </a>
-        </li>
-        <li>
-          <a
-            href="#objectives"
-            onClick={() => {
-              setIsNavExpanded(!isNavExpanded);
-            }}
-          >
-            OBJECTIVES
-          </a>
-        </li>
-        <li>
-          <a
-            href="#stories"
-            onClick={() => {
-              setIsNavExpanded(!isNavExpanded);
-            }}
-          >
-            STORIES
-          </a>
-        </li>
-        <li>
-          <a
-            href="#gallery"
-            onClick={() => {
-              setIsNavExpanded(!isNavExpanded);
-            }}
-          >
-            GALLERY
-          </a>
-        </li>
-      </ul>
+      <div className={`navbar-links ${isNavExpanded ? "active" : ""}`}>
+        <ul>
+          <li>
+            <a
+              href="#app"
+              onClick={() => {
+                setIsNavExpanded(false);
+              }}
+            >
+              HOME
+            </a>
+          </li>
+          <li>
+            <a
+              href="#aboutUs"
+              onClick={() => {
+                setIsNavExpanded(false);
+              }}
+            >
+              ABOUT US
+            </a>
+          </li>
+          <li>
+            <a
+              href="#objectives"
+              onClick={() => {
+                setIsNavExpanded(false);
+              }}
+            >
+              OBJECTIVES
+            </a>
+          </li>
+          <li>
+            <a
+              href="#stories"
+              onClick={() => {
+                setIsNavExpanded(false);
+              }}
+            >
+              STORIES
+            </a>
+          </li>
+          <li>
+            <a
+              href="#gallery"
+              onClick={() => {
+                setIsNavExpanded(false);
+              }}
+            >
+              GALLERY
+            </a>
+          </li>
+        </ul>
+      </div>
 
-      <ul className={`navigation-pc`}>
-        <li>
-          <a href="#app">HOME</a>
-        </li>
-        <li>
-          <a href="#aboutUs">ABOUT US</a>
-        </li>
-        <li>
-          <a href="#objectives">OBJECTIVES</a>
-        </li>
-        <li>
-          <a href="#stories">STORIES</a>
-        </li>
-        <li>
-          <a href="#gallery">GALLERY</a>
-        </li>
-      </ul>
-
-      <div className="btn-wrapper">
+      <div className={`btn-wrapper ${isNavExpanded ? "active" : ""}`}>
         <button
           className="btn"
           onClick={() => {
             openModal();
+            setIsNavExpanded(false);
           }}
         >
           Join Now
         </button>
       </div>
 
-      <button
+      <div
         className="hamburger"
         onClick={() => {
-          console.log("This button has been clicked");
           setIsNavExpanded(!isNavExpanded);
-          console.log(isNavExpanded);
         }}
       >
         <GiHamburgerMenu />
-      </button>
+      </div>
     </nav>
   );
 };

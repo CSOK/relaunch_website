@@ -1,178 +1,97 @@
-.navigation {
-  min-height: 50px;
-  width: 100%;
+.navbar {
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
-  font-style: normal;
-  padding: 0 12px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 0 0.7rem;
 
-  .nav-collapsed {
-    display: none;
-  }
   .logo-wrapper {
-    margin: 0px 5px;
     img {
-      width: 140px;
+      width: 120px;
+      height: 60px;
     }
   }
 
   .btn-wrapper {
     display: flex;
-    @media screen and (max-width: 768px) {
-      button {
-        width: 100%;
-      }
-      width: 100%;
-      margin-top: 5px;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  .navigation-menu {
     align-items: center;
     justify-content: center;
-    flex-direction: row;
-    gap: 5px;
-    width: 100%;
-    li {
-      list-style-type: none;
-      margin: 0 1rem;
-      width: 80%;
-
-      a {
-        text-decoration: none;
-        border: 1px solid white;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 60px;
-
-        &:hover {
-          color: black;
-        }
-
-        @media screen and (max-width: 768px) {
-          color: rgb(255, 255, 255);
-          width: 100%;
-          padding: 1.5rem 0;
-        }
-      }
-      &:hover {
-        background-color: white;
-      }
-      @media screen and (max-width: 768px) {
-        text-align: center;
-        margin: 0;
-        color: black;
-      }
-    }
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-    }
   }
+  .navbar-links {
+    height: 100%;
 
-  .navigation-pc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 5px;
-    width: 100%;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
     li {
-      list-style-type: none;
-      margin: 0 1rem;
-      a {
-        text-decoration: none;
-        border: 1px solid white;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 120px;
-        height: 60px;
+      list-style: none;
 
-        &:hover {
-          color: black;
-        }
+      a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 1rem;
       }
       &:hover {
-        background-color: white;
+        background-color: #556;
       }
-    }
-    @media screen and (max-width: 768px) {
-      display: none;
     }
   }
 
   .hamburger {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    background-color: #ffffff;
-    color: black;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
     position: absolute;
-    top: 25px;
-    right: 15px;
-    &:hover {
-      background-color: #ffffff;
-    }
-    @media screen and (max-width: 768px) {
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+
+    .hamburger {
       display: flex;
     }
-  }
+    .navbar-links {
+      display: none;
+      width: 100%;
 
-  .btn {
-    border-radius: 19px;
-    background: none;
-  }
+      ul {
+        width: 100%;
+        flex-direction: column;
 
-  .nav-expanded {
-    display: flex;
+        li {
+          text-align: center;
+
+          a {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
 
     .btn-wrapper {
+      display: none;
+      width: 100%;
+    }
+
+    .navbar-links.active {
       display: flex;
     }
 
-    .logo-wrapper {
-      margin: 0px 2px;
-
-      img {
-        width: 80px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-
-    // .navigation-menu {
-    //   flex-direction: column;
-    //   width: 100%;
-    //   display: none;
-    // }
-
-    .logo-wrapper {
-      margin: 0px 2px;
-
-      img {
-        width: 80px;
-      }
+    .btn-wrapper.active {
+      display: flex;
     }
   }
 }
