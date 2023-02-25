@@ -72,7 +72,7 @@ export const Register = ({ isModalOpen, closeModal }) => {
             <input
               type="tel"
               className="input-field"
-              placeholder="eg. 07xxxxxxxx"
+              placeholder="eg. 07xxx xxxxx"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required

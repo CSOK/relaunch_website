@@ -67,7 +67,7 @@ const Navbar = ({ openModal }) => {
 
       <div className={`btn-wrapper ${isNavExpanded ? "active" : ""}`}>
         <button
-          className="btn"
+          className="button"
           onClick={() => {
             openModal();
             setIsNavExpanded(false);

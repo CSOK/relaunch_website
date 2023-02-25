@@ -50,24 +50,40 @@
   .aboutContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    font-size: 18px;
     height: 50vh;
     margin: 0 30px;
     .aboutContent {
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       gap: 30px;
       margin-top: 30px;
-      button {
-        width: 120px;
-        height: 40px;
-        border: none;
-        border-radius: 10px;
-        background-color: #ffffff;
-        color: #06133c;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        margin: 0 10px;
+      .aboutButtons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+
+        button {
+          width: 140px;
+          height: 40px;
+          border: none;
+          border-radius: 10px;
+          background-color: #ffffff;
+          color: #06133c;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          margin: 0 10px;
+
+          @media screen and (max-width: 768px) {
+            width: 80%;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+        }
       }
       .readMore {
         background-color: #06133c;
@@ -107,6 +123,9 @@
     .aboutContainer {
       display: flex;
       flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       height: auto;
       margin: 0 30px;
       gap: 30px;

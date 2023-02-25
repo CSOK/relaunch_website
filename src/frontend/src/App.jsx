@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.scss";
 import {
+  Slider,
   AboutUs,
   Footer,
   Gallery,
-  Hero,
   Navbar,
   Objectives,
   Sponsors,
@@ -43,7 +43,7 @@ function App() {
         />
       )}
 
-      <Hero />
+      <Slider />
       <AboutUs
         isModalOpen={isModalOpen}
         openModal={openModal}

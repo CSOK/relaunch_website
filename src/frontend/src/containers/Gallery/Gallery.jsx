@@ -87,7 +87,7 @@ const Gallery = ({ toggleGallery, isGalleryOpen }) => {
             toggleGallery();
           }}
         >
-          View All
+          {!isGalleryOpen ? "View All" : "Minimize"}
         </button>
       </div>
     </div>
