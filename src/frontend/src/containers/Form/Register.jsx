@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Register.scss";
 import { IoMdClose } from "react-icons/io";
 import CSOKLogo from "../../assets/CSOK_2.png";
 
-export const Register = ({ isModalOpen, closeModal }) => {
+export const Register = ({ closeModal }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => (document.body.style.overflow = "unset");
+  }, []);
+
   const [fullName, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -18,12 +23,6 @@ export const Register = ({ isModalOpen, closeModal }) => {
       course,
     });
   };
-
-  if (isModalOpen) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
 
   return (
     <div className="modal">
