@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 17, 55, 1) 100%,
+    rgba(0, 0, 0, 1) 0%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: serif;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 0;
+  margin: 3rem 0;
+}
+
+// Default button Styling.
+button {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #06133c;
+  border: 1px solid white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #06133c;
+  }
+}
