@@ -1,9 +1,16 @@
 import React from "react";
-import "./StoriesSection.scss";
+import { StoriesCard } from "../../components";
 const StoriesSection = () => {
   return (
-    <div className="stories">
-      <h1>StoriesSection</h1>
+    <div className="stories" id="stories">
+      <h1>Stories</h1>
+
+      <div className="content_container">
+        <StoriesCard />
+        <StoriesCard />
+        <StoriesCard />
+        <StoriesCard />
+      </div>
     </div>
   );
 };
