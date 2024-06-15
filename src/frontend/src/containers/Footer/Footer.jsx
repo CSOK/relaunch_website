@@ -4,36 +4,32 @@ import githubLogo from "../../assets/github.png";
 import twitterLogo from "../../assets/twitter.png";
 import facebookLogo from "../../assets/facebook.png";
 import CSOKLogo from "../../assets/CSOK_2.png";
+
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer>
-      <div class="container-1">
-        <div class="child">
+      <div className="container-1">
+        <div className="child">
           <img src={CSOKLogo} alt="" />
         </div>
-        <ul class="child">
-          <li class="head">INFORMATION</li>
-          <li>ABOUT US</li>
-          <li>OBJECTIVES</li>
-          <li>STORIES</li>
-          <li>GALLERY</li>
-        </ul>
-        {/* <ul class="child">
-          <li class="head">POLICY INFO </li>
+        {/* <ul className="child">
+          <li className="head">POLICY INFO </li>
           <li>PRIVACY INFO</li>
           <li>FAQ</li>
           <li>TERMS OF POLICY</li>
         </ul> */}
-        <div class="child">
-          <div class="head center">
+        <div className="child">
+          <div className="head center">
             <p>SOCIALS</p>
           </div>
-          <div class="socials">
+          <div className="socials">
             <a href="#">
-              <img src={facebookLogo} alt="Twitter logo" />
+              <img src={facebookLogo} alt="Facebook logo" />
             </a>
             <a href="#">
-              <img src={githubLogo} alt="Github Logo" />
+              <img src={githubLogo} alt="Github logo" />
             </a>
             <a href="#">
               <img src={twitterLogo} alt="Twitter logo" />
@@ -42,7 +38,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        @2023 <span>|</span> COMPUTER SOCIETY OF KIMATHI
+        @{currentYear} <span>|</span> COMPUTER SOCIETY OF KIMATHI
       </div>
     </footer>
   );

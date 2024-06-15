@@ -3,76 +3,61 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
+  color: black; /* Changed text color to black */
   padding: 30px 0;
-  /* ff 3.6+ */
-  background: -moz-linear-gradient(
-    181deg,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(6, 17, 55, 1) 94%
-  );
-
-  /* safari 5.1+,chrome 10+ */
-  background: -webkit-linear-gradient(
-    181deg,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(6, 17, 55, 1) 94%
-  );
-
-  /* opera 11.10+ */
-  background: -o-linear-gradient(
-    181deg,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(6, 17, 55, 1) 94%
-  );
-
-  /* ie 6-9 */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#061137', endColorstr='#000000', GradientType=1 );
-
-  /* ie 10+ */
-  background: -ms-linear-gradient(
-    181deg,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(6, 17, 55, 1) 94%
-  );
-
-  /* global 94%+ browsers support */
-  background: linear-gradient(
-    181deg,
-    rgba(0, 0, 0, 1) 20%,
-    rgba(6, 17, 55, 1) 94%
-  );
-
+  background: white; /* Set a clean white background */
+  
   h1 {
-    margin-top: 0rem;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: black; /* Ensure h1 text color is black */    
+    font-family: 'Tahoma', 'Segoe UI', sans-serif; /* Updated font family */
+    font-weight: bold; /* Added bold font weight */
+    position: relative; /* Added position relative */
+  }
+
+  h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the position of the line */
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Center the line */
+    width: 50px; /* Set the width of the line */
+    height: 2px; /* Set the height of the line */
+    background-color: #06133c; /* Set the color of the line */
   }
 
   .aboutContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 18px;
+    font-size: 25px;
     height: 50vh;
     margin: 0 30px;
+    
     .aboutContent {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       gap: 30px;
-      margin-top: 30px;
+      margin-top: 50px;
+      
       .aboutButtons {
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: flex-start;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        font-size:  15px;
 
         button {
           width: 140px;
-          height: 40px;
+          height: 45px;
           border: none;
           border-radius: 10px;
-          background-color: #ffffff;
-          color: #06133c;
-          font-size: 16px;
+          background-color: #06133c; /* Dark background for contrast */
+          color: #ffffff; /* White text for readability */
+          font-size: 18px;
           font-weight: 600;
           cursor: pointer;
           margin: 0 10px;
@@ -81,14 +66,16 @@
             width: 80%;
           }
         }
+
         @media screen and (max-width: 768px) {
           justify-content: center;
         }
       }
+      
       .readMore {
         background-color: #06133c;
         color: #ffffff;
-        border: 1px solid #ffffff;
+        border: 1px solid #06133c; /* Border color to match button background */
       }
     }
 
@@ -96,7 +83,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: gra;
+      background-color: rgb(255, 255, 255); /* Ensuring the background stays white */
+      
       img {
         max-width: 100%;
         max-height: 100%;
@@ -108,18 +96,13 @@
   }
 }
 
-//media queries
+// Media queries
 @media (max-width: 768px) {
   .aboutUs {
     padding-top: 10px;
     gap: 30px;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 1) 29%,
-      rgba(6, 19, 60, 1) 90%
-    );
-
+    background: white; /* Maintain a white background */
+    
     .aboutContainer {
       display: flex;
       flex-direction: column-reverse;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutUs.scss";
-import COSK from "../../assets/COSK.png";
+import CSOK from "../../assets/csokcontinuity.png";
 const AboutUs = ({ isModalOpen, openModal, closeModal }) => {
   return (
     <div className="aboutUs" id="aboutUs">
@@ -14,7 +14,7 @@ const AboutUs = ({ isModalOpen, openModal, closeModal }) => {
           </p>
           <p>
             The club membership is open for students and staff within the
-            university.We aim to create awareness, promote growth of computer
+            university. We aim to create awareness, promote growth of computer
             knowledge and entrepreneurship and nurture technological and
             programming talent.
           </p>
@@ -32,7 +32,7 @@ const AboutUs = ({ isModalOpen, openModal, closeModal }) => {
           </div>
         </div>
         <div className="aboutImage">
-          <img src={COSK} alt="COSK" />
+          <img src={CSOK} alt="CSOK" />
         </div>
       </div>
     </div>

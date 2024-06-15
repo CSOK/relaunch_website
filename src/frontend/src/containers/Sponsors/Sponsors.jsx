@@ -3,7 +3,7 @@ import "./Sponsors.scss";
 import dehub from "../../assets/sponsors/dehub.png";
 import dkut from "../../assets/sponsors/dkut.png";
 import gdsc from "../../assets/sponsors/gdsc.png";
-import microsoft from "../../assets/sponsors/microsoft.png";
+import microsoft from "../../assets/sponsors/mlsalogo.png";
 import { MotionWrap } from "../../HOC";
 const Sponsors = () => {
   return (
