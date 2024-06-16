@@ -6,7 +6,7 @@ import CSOKLogo from "../../assets/CSOK_2.png";
 const Navbar = ({ openModal }) => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   return (
-    <nav className="navbar">
+    <nav className="navbar bg-white">
       <div className="logo-wrapper">
         <img src={CSOKLogo} alt="" />
       </div>

@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .debug {
+      @apply border-red-500 border-2;
+    }
+    .heading {
+      @apply text-xl font-bold text-gray-800;
+    
+    }
+  }
