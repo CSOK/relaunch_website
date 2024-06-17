@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Slider.scss";
+import csoklearn from "../../assets/csoklearn.jpg";
+import csokstudents3 from "../../assets/csokstudents3.jpg";
+
 const Slider = () => {
   const slides = [
-    { name: "../../assets/enviroment_5.jpg", title: "beach" },
-    { name: "../../assets/enviroment_3.jpg", title: "boat" },
+    { name: csoklearn, title: "beach" },
+    { name: csokstudents3, title: "boat" },
+
+    
   ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const ImageSlider = {
-    backgroundImage: `url(${slides[currentIndex].name})`,
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      incrementSlider();
+    }, 3000); // Auto-scroll every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   const incrementSlider = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -28,25 +39,13 @@ const Slider = () => {
 
   return (
     <div className="slider-container">
-      <img
-        src={`../../assets/${slides[currentIndex].name}`}
-        alt="Slider Image"
-      />
+      <div
+        className="slider-image"
+        style={{ backgroundImage: `url(${slides[currentIndex].name})` }}
+      ></div>
       <div className="navigation">
-        <div
-          onClick={() => {
-            decrementSlider();
-          }}
-        >
-          ❰
-        </div>
-        <div
-          onClick={() => {
-            incrementSlider();
-          }}
-        >
-          ❱
-        </div>
+        <div onClick={decrementSlider}>❰</div>
+        <div onClick={incrementSlider}>❱</div>
       </div>
       <div className="slider-dots">
         {slides.map((slide, slideIndex) => (
@@ -59,7 +58,7 @@ const Slider = () => {
           ></div>
         ))}
       </div>
-      <div class="border-bottom">
+      <div className="border-bottom">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +67,7 @@ const Slider = () => {
         >
           <path
             d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z"
-            class="shape-fill"
+            className="shape-fill"
           ></path>
         </svg>
       </div>

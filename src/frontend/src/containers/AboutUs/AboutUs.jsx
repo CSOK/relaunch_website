@@ -4,7 +4,7 @@ import CSOK from "../../assets/csokcontinuity.png";
 const AboutUs = ({ isModalOpen, openModal, closeModal }) => {
   return (
     <div className="aboutUs" id="aboutUs">
-      <h1>About Us</h1>
+      <h1>ABOUT COMPUTER SOCIETY OF kIMATHI</h1>
       <div className="aboutContainer">
         <div className="aboutContent">
           <p>

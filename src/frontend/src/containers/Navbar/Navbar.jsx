@@ -49,7 +49,7 @@ const Navbar = ({ openModal }) => {
                 setIsNavExpanded(false);
               }}
             >
-              STORIES
+              LEADS
             </a>
           </li>
           <li>
@@ -59,7 +59,7 @@ const Navbar = ({ openModal }) => {
                 setIsNavExpanded(false);
               }}
             >
-              GALLERY
+              EVENTS
             </a>
           </li>
         </ul>
