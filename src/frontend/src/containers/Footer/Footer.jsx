@@ -22,13 +22,13 @@ const Footer = () => {
         </ul> */}
         <div className="child">
           <div className="head center">
-            <p>SOCIALS</p>
+            <p></p>
           </div>
           <div className="socials">
             <a href="#">
               <img src={facebookLogo} alt="Facebook logo" />
             </a>
-            <a href="#">
+            <a href="https://github.com/CSOK">
               <img src={githubLogo} alt="Github logo" />
             </a>
             <a href="#">
