@@ -32,7 +32,7 @@ const Gallery = ({ toggleGallery, isGalleryOpen }) => {
     },
     {
       image: eventcloud,
-      title: "Beyond the CloudAfrica's Talking Mini-Summit",
+      title: "Beyond the Cloud Online Event",
       date: "1 February 2024",
       description: "Introduction to the Cloud and an engaging Q&A session with Cloud Experts",
       isPast: true,
