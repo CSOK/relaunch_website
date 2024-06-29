@@ -9,6 +9,8 @@ import i6 from "../../assets/csokruth.jpg"
 import i7 from "../../assets/csokemmanuel.jpg"
 import i8 from "../../assets/csokjoyce.jpg"
 import i9 from "../../assets/csokjude.jpg"
+import i10 from "../../assets/csokboni.jpg"
+
 
 const leads = [
   {
@@ -73,6 +75,13 @@ const leads = [
     position: "Webmaster/IT Manager",
     desc: "Web Developer",
     image: i9
+  },
+  {
+    id: 10,
+    name: "Bonface Maina",
+    position: "Security Manager",
+    desc: "Cybersecurity Expert",
+    image: i10
   },
 ]
 
