@@ -1,6 +1,117 @@
 .aboutUs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black; /* Changed text color to black */
+  padding: 30px 0;
+  background: white; /* Set a clean white background */
+  
   h1 {
-    text-transform: uppercase;
-    color: black;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: black; /* Ensure h1 text color is black */    
+    font-family: 'Tahoma', 'Segoe UI', sans-serif; /* Updated font family */
+    font-weight: bold; /* Added bold font weight */
+    position: relative; /* Added position relative */
+  }
+
+  h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust the position of the line */
+    left: 50%; /* Center the line */
+    transform: translateX(-50%); /* Center the line */
+    width: 50px; /* Set the width of the line */
+    height: 2px; /* Set the height of the line */
+    background-color: #06133c; /* Set the color of the line */
+  }
+
+  .aboutContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 25px;
+    height: 50vh;
+    margin: 0 30px;
+    
+    .aboutContent {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+      margin-top: 50px;
+      
+      .aboutButtons {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        font-size:  15px;
+
+        button {
+          width: 140px;
+          height: 45px;
+          border: none;
+          border-radius: 10px;
+          background-color: #06133c; /* Dark background for contrast */
+          color: #ffffff; /* White text for readability */
+          font-size: 18px;
+          font-weight: 600;
+          cursor: pointer;
+          margin: 0 10px;
+
+          @media screen and (max-width: 768px) {
+            width: 80%;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+        }
+      }
+      
+      .readMore {
+        background-color: #06133c;
+        color: #ffffff;
+        border: 1px solid #06133c; /* Border color to match button background */
+      }
+    }
+
+    .aboutImage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(255, 255, 255); /* Ensuring the background stays white */
+      
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        min-width: 40%;
+        min-height: 40%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .aboutUs {
+    padding-top: 10px;
+    gap: 30px;
+    background: white; /* Maintain a white background */
+    
+    .aboutContainer {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: auto;
+      margin: 0 30px;
+      gap: 30px;
+    }
   }
 }

@@ -1,6 +1,157 @@
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .navbar {
-  h1 {
-    text-transform: uppercase;
-    color: red;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: 0 0.7rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-wrapper {
+  img {
+    width: auto;
+    height: 80px; /* Increased logo height */
+    max-width: 200px; /* Increased max-width */
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  button {
+    width: 180px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+      border-radius: 50px;
+    }
+  }
+}
+
+.navbar-links {
+  height: 100%;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    width: 170px;
+    height: 50px;
+    text-align: center;
+
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      padding: 1rem;
+      transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+
+      &:hover {
+        background-color: black;
+        color: white;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  font-size: 30px;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: start;
+
+    .hamburger {
+      display: flex;
+    }
+    .navbar-links {
+      display: none;
+      width: 100%;
+      -webkit-animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      animation: fade-in 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+      ul {
+        width: 100%;
+        flex-direction: column;
+
+        li {
+          width: 100%;
+          margin: 0.2rem 0rem;
+          height: 40px;
+          border-radius: 2px;
+          border: 1px solid black;
+          a {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+
+    .btn-wrapper {
+      display: none;
+      width: 100%;
+      padding: 1rem 0rem;
+      button {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+      }
+    }
+
+    .navbar-links.active {
+      display: flex;
+    }
+
+    .btn-wrapper.active {
+      display: flex;
+    }
   }
 }
