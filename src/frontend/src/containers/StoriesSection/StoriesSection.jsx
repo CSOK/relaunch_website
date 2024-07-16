@@ -10,6 +10,8 @@ import i7 from "../../assets/csokemmanuel.jpg"
 import i8 from "../../assets/csokjoyce.jpg"
 import i9 from "../../assets/csokjude.jpg"
 import i10 from "../../assets/csokboni.jpg"
+import i11 from "../../assets/csokjomo.jpg"
+import i12 from "../../assets/csokflo.jpg"
 
 
 const leads = [
@@ -63,13 +65,6 @@ const leads = [
     image: i7
   },
   {
-    id: 8,
-    name: "Joyce Miako",
-    position: "Membership Co-ordinator",
-    desc: "Data Analyst",
-    image: i8
-  },
-  {
     id: 9,
     name: "Jude Koome",
     position: "Webmaster/IT Manager",
@@ -82,6 +77,20 @@ const leads = [
     position: "Security Manager",
     desc: "Cybersecurity Expert",
     image: i10
+  },
+  {
+    id: 11,
+    name: "Florence Ndemi",
+    position: "Club Relations Manager",
+    desc: "Blockchain Expert",
+    image: i11
+  },
+  {
+    id: 12,
+    name: "Jomo Kigo",
+    position: "Content Developer",
+    desc: "UI/UX Designer",
+    image: i12
   },
 ]
 

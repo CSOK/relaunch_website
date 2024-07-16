@@ -3,16 +3,17 @@ import "./Gallery.scss";
 import atlassian1 from "../../assets/csokstudents.jpg";
 import eventcloud from "../../assets/eventscloud.jpeg";
 import eventsitsm from "../../assets/eventsitsm.jpeg";
+import eventsprofessionals1 from "../../assets/eventsprofessionals1.png";
 
 const Gallery = ({ toggleGallery, isGalleryOpen }) => {
   const slides = [
     {
-      image: atlassian1,
-      title: "Upcoming Event 1",
+      image: eventsprofessionals1,
+      title: "The Professionals Take: Antony Orenge",
       date: "25 October 2024",
-      description: "Details about upcoming event 1...",
+      description: "Building Your Professional Presence: Crafting a Strong Brand, Portfolio, and Interview Skills",
       isPast: false,
-      rsvpLink: "https://example.com/rsvp1",
+      rsvpLink: "https://bit.ly/3S1t2jO",
     },
     {
       image: atlassian1,
